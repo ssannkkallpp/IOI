@@ -44,6 +44,7 @@ int ls(int *a, int n, int k) {
 	for(int i=0;i<n;i++) {
 		for(int j=0;j<k;j++) {
 			if(i == 0 || j == 0) V[i][j] = 1; 
+			if(j > a[i]) continue;
 			else {
 				f=i-1;
 				go = 0;
